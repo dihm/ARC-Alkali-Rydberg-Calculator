@@ -12,7 +12,7 @@ from numpy.distutils.misc_util import get_numpy_include_dirs
 
 
 arc_ext = Extension(
-            'arc.arc_c_extensions',
+            'arc_c_extensions',
             sources = ['arc/arc_c_extensions.c'],
             extra_compile_args = ['-Wall','-O3'],
             include_dirs=get_numpy_include_dirs(),
