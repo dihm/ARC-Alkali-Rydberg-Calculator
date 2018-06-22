@@ -172,7 +172,7 @@ class AlkaliAtom(object):
         self._databaseInit()
 
         if self.cpp_numerov:
-            from .arc_c_extensions import NumerovWavefunction
+            from arc.arc_c_extensions import NumerovWavefunction
             self.NumerovWavefunction = NumerovWavefunction
 
         # load dipole matrix elements previously calculated
