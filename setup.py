@@ -14,7 +14,7 @@ from numpy.distutils.misc_util import get_numpy_include_dirs
 arcExtensionSourcePath = os.path.join('arc','arc_c_extensions.c')
 
 arc_ext = Extension(
-            'arc.arc_c_extensions',
+            'arc_c_extensions',
             sources = [arcExtensionSourcePath],
             extra_compile_args = ['-Wall','-O3'],
             include_dirs=get_numpy_include_dirs(),
