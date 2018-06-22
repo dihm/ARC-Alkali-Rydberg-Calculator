@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- mode: Python; coding: utf-8 -*-
 
-
+import os
 import sys
 try:
     from setuptools import setup, Extension
@@ -11,9 +11,11 @@ except ImportError:
 from numpy.distutils.misc_util import get_numpy_include_dirs
 
 
+arcExtensionSourcePath = os.path.join('arc','arc_c_extensions.c')
+
 arc_ext = Extension(
-            'arc_c_extensions',
-            sources = ['arc/arc_c_extensions.c'],
+            'arc.arc_c_extensions',
+            sources = [arcExtensionSourcePath],
             extra_compile_args = ['-Wall','-O3'],
             include_dirs=get_numpy_include_dirs(),
         )
